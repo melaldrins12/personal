@@ -12,7 +12,8 @@
     "axe/name-role-value": [
       "default",
       {
-        "link-name": "off"
+        "link-name": "off",
+        "button-name": "off"
       }
     ],
     "compat-api/css": [
@@ -23,7 +24,8 @@
           "color: color-mix(in oklab, currentColor 50%, transparent)"
         ]
       }
-    ]
+    ],
+    "no-inline-styles": "off"
   },
   "browserslist": [
     "defaults",
