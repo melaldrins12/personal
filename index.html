@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+
+<style>
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(images/me.jpg) no-repeat center center/cover;
+        opacity: 0.1;
+        z-index: -1;
+        animation: fadeIn 2s ease-in-out;
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 0.1;
+        }
+    }
+
+    nav, footer {
+        opacity: 0.9;
+        animation: slideDown 1s ease-out;
+    }
+
+    @keyframes slideDown {
+        from {
+            transform: translateY(-100%);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    h1, p, a {
+        animation: fadeUp 1.5s ease-in-out;
+    }
+
+    @keyframes fadeUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    img {
+        animation: zoomIn 1.5s ease-in-out;
+    }
+
+    @keyframes zoomIn {
+        from {
+            transform: scale(0.8);
+            opacity: 0;
+        }
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    .button-hover:hover {
+        animation: pulse 0.5s infinite;
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+    }
+
+    .social-icons svg {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .social-icons svg:hover {
+        transform: rotate(360deg) scale(1.2);
+    }
+</style>
+
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="src/app.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-black min-h-screen flex flex-col">   
+
+    <nav class="bg-white p-5 fixed top-0 left-0 w-full shadow-lg z-50">
+        <div class="container mx-auto flex justify-between items-center max-w-6xl">
+            <div class="flex items-center space-x-2">
+                <svg class="h-8 w-8 text-black-500"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M11 17a2.5 2.5 0 0 0 2 0" />  <path d="M12 3C7.336 3 4.604 5.331 4.138 8.595a11.816 11.816 0 0 0 1.998 8.592 10.777 10.777 0 003.199 3.064h0c1.666.999 3.664.999 5.33 0h0a10.777 10.777 0 0 0 3.199 -3.064 11.89 11.89 0 001.998-8.592C19.396 5.33 16.664 3 12 3z" />  <line x1="8" y1="11" x2="10" y2="13" />  <line x1="16" y1="11" x2="14" y2="13" /></svg>
+                <h1 class="text-3xl font-bold text-red-500 hover:text-black transition duration-300">My Portfolio</h1>
+            </div>
+            <ul class="flex space-x-6 text-lg">
+                <li><a href="index.html" class="hover:text-red-500 transition duration-300">Home</a></li>
+                <li><a href="about.html" class="hover:text-red-500 transition duration-300">About Me</a></li>
+                <li><a href="projects.html" class="hover:text-red-500 transition duration-300">Projects</a></li>
+                <li><a href="contact.html" class="hover:text-red-500 transition duration-300">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="mt-28 w-full max-w-6xl p-8 flex items-center justify-between mx-auto">
+        <div class="max-w-xl">
+            <p class="text-lg">Hello</p>
+            <h1 class="text-6xl font-extrabold mb-4">I'm <span class="text-red-500">Mel Aldrin Reyes</span></h1>
+            <p class="text-lg mb-6">I am a passionate Web Developer, dedicated to crafting engaging, user-friendly websites. Explore my projects and see how I bring ideas to life through code and design.</p>
+            <div class="flex space-x-4">
+              <a href="projects.html" class="bg-black text-white py-3 px-6 rounded-lg hover:bg-red-800 button-hover">View Projects</a>
+            </div>
+        </div>
+        <div>
+          <img src="images/me.jpg" alt="Mel Aldrin L. Reyes" class="w-80 rounded-lg shadow-lg">
+        </div>
+    </section>
+    
+
+    <footer class="bg-white p-5 w-full text-center shadow-lg mt-auto">
+        <div class="container mx-auto max-w-6xl">
+            <p>&copy; 2025 Mel Aldrin L. Reyes. All Rights Reserved.</p>
+            <ul class="flex justify-center space-x-4 mt-2">
+                <li><a href="#" class="hover:text-gray-500">Privacy Policy</a></li>
+                <li><a href="#" class="hover:text-gray-500">Terms of Service</a></li>
+                <li><a href="#" class="hover:text-gray-500">Contact</a></li>
+            </ul>
+            <div class="flex justify-center space-x-4 mt-4">
+              <a href="https://www.facebook.com/melaldrin.reyes" class="hover:opacity-75"><svg class="h-8 w-8 text-red-500"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg>
+                <a href="https://www.instagram.com/tutubiiiii/" class="hover:opacity-75"><svg class="h-8 w-8 text-red-500"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <rect x="4" y="4" width="16" height="16" rx="4" />  <circle cx="12" cy="12" r="3" />  <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" /></svg></a>
+                <a href="https://github.com/melaldrins12" class="hover:opacity-75"><svg class="h-8 w-8 text-red-500"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M9 19c-4.286 1.35-4.286-2.55-6-3m12 5v-3.5c0-1 .099-1.405-.5-2 2.791-.3 5.5-1.366 5.5-6.04a4.567 4.567 0 0 0 -1.333 -3.21 4.192 4.192 0 00-.08-3.227s-1.05-.3-3.476 1.267a12.334 12.334 0 0 0 -6.222 0C6.462 2.723 5.413 3.023 5.413 3.023a4.192 4.192 0 0 0 -.08 3.227A4.566 4.566 0 004 9.486c0 4.64 2.709 5.68 5.5 6.014-.591.589-.56 1.183-.5 2V21" /></svg></a>
+                
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
